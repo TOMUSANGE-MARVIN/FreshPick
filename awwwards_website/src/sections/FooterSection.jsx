@@ -1,14 +1,10 @@
-import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 const FooterSection = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
-
   return (
-    <section className="footer-section">
+    <section id="footer" className="footer-section">
       <img
-        src="/images/footer-dip.png"
+        src="/images/freshpick/footer-dip.png"
         alt=""
         className="w-full object-cover -translate-y-1"
       />
@@ -16,24 +12,9 @@ const FooterSection = () => {
       <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh]">
         <div className="overflow-hidden z-10">
           <h1 className="general-title text-center text-milk py-5">
-            #CHUGRESPONSIBLY
+            #PUREJOY
           </h1>
         </div>
-
-        {isMobile ? (
-          <img
-            src="/images/footer-drink.png"
-            className="absolute top-0 object-contain"
-          />
-        ) : (
-          <video
-            src="/videos/splash.mp4"
-            autoPlay
-            playsInline
-            muted
-            className="absolute top-0 object-contain mix-blend-lighten"
-          />
-        )}
 
         <div className="flex-center gap-5 relative z-10 md:mt-20 mt-5">
           <div className="social-btn">
@@ -50,29 +31,30 @@ const FooterSection = () => {
         <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
           <div className="flex items-center md:gap-16 gap-5">
             <div>
-              <p>SPYLT Flavors</p>
+              <p>FreshPick Flavors</p>
             </div>
             <div>
-              <p>Chug Club</p>
-              <p>Student Marketing</p>
-              <p>Dairy Dealers</p>
+              <p>Order Delivery</p>
+              <p>Ggaba Rd</p>
+              <p>Find Us</p>
             </div>
             <div>
               <p>Company</p>
-              <p>Contacts</p>
-              <p>Tasty Talk</p>
+              <Link to="/contact" className="block hover:text-light-brown transition-colors">
+                Contact
+              </Link>
+              <Link to="/about" className="block hover:text-light-brown transition-colors">
+                About Us
+              </Link>
             </div>
           </div>
 
           <div className="md:max-w-lg">
             <p>
-              Get Exclusive Early Access and Stay Informed About Product
-              Updates, Events, and More!
+              Get Exclusive Early Access and Stay Informed About New
+              Flavors, Offers, and More!
             </p>
             <div className="flex justify-between items-center border-b border-[#D9D9D9] py-5 md:mt-10">
-              {/* The input field and arrow icon for newsletter signup. */}{" "}
-              {/* A
-          border at the bottom for a clean, modern look. */}
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -84,8 +66,7 @@ const FooterSection = () => {
         </div>
 
         <div className="copyright-box">
-          {/* The final row with copyright and legal links. */}
-          <p>Copyright © 2026 Spylt - All Rights Reserved</p>
+          <p>Copyright © 2026 FreshPick - All Rights Reserved</p>
           <div className="flex items-center gap-7">
             <p>Privacy Policy</p>
             <p>Terms of Sеrvice</p>

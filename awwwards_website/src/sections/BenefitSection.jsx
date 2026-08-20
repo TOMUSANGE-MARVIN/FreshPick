@@ -48,37 +48,37 @@ const BenefitSection = () => {
         <div className="col-center">
           <p>
             Unlock the Advantages: <br />
-            Explore the Key Benefits of Choosing SPYLT
+            Explore the Key Benefits of Choosing FreshPick
           </p>
 
           <div className="mt-20 col-center">
             <ClipPathTitle
-              title={"Shelf stable"}
-              color={"#faeade"}
-              bg={"#c88e64"}
+              title={"Cold-pressed fresh"}
+              color={"#ffffff"}
+              bg={"#3bb83d"}
               className={"first-title"}
-              borderColor={"#222123"}
+              borderColor={"#123b1b"}
             />
             <ClipPathTitle
-              title={"Protein + Caffeine"}
-              color={"#222123"}
-              bg={"#faeade"}
+              title={"100% Natural"}
+              color={"#123b1b"}
+              bg={"#ffffff"}
               className={"second-title"}
-              borderColor={"#222123"}
+              borderColor={"#123b1b"}
             />
             <ClipPathTitle
-              title={"Infinitely recyclable"}
-              color={"#faeade"}
-              bg={"#7F3B2D"}
+              title={"Eco-friendly packaging"}
+              color={"#ffffff"}
+              bg={"#ed1c24"}
               className={"third-title"}
-              borderColor={"#222123"}
+              borderColor={"#123b1b"}
             />
             <ClipPathTitle
-              title={"Lactose free"}
-              color={"#2E2D2F"}
-              bg={"#FED775"}
+              title={"No added sugar"}
+              color={"#123b1b"}
+              bg={"#eaf7ec"}
               className={"fourth-title"}
-              borderColor={"#222123"}
+              borderColor={"#123b1b"}
             />
           </div>
 

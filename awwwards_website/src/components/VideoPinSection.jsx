@@ -36,16 +36,17 @@ const VideoPinSection = () => {
         }}
         className="size-full video-box"
       >
-        <video src="/videos/pin-video.mp4" playsInline muted loop autoPlay />
+        <img
+          src="/images/freshpick/store-2.jpg"
+          alt="FreshPick, Ggaba Rd"
+          className="size-full object-cover"
+        />
 
-        <div className="abs-center md:scale-100 scale-200">
-          <img src="/images/circle-text.svg" alt="" className="spin-circle" />
-          <div className="play-btn">
-            <img
-              src="/images/play.svg"
-              alt=""
-              className="size-[3vw] ml-[.5vw]"
-            />
+        <div className="abs-center">
+          <div className="bg-black/40 backdrop-blur-md rounded-full px-8 py-5 md:px-12 md:py-7 border border-white/30">
+            <p className="text-white text-center font-paragraph md:text-lg font-semibold whitespace-nowrap">
+              Fresh at Ggaba Rd, daily
+            </p>
           </div>
         </div>
       </div>
