@@ -99,7 +99,7 @@ const NutritionSection = () => {
 
         <div className="flex md:justify-center items-center translate-y-5">
           <div className="md:max-w-xs max-w-md">
-            <p className="text-lg md:text-right text-balance font-paragraph">
+            <p className="text-lg md:text-right text-balance font-paragraph text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.4)]">
               Real fruit means real nutrients — vitamins, minerals and fiber
               in every bottle, with zero added sugar
             </p>
