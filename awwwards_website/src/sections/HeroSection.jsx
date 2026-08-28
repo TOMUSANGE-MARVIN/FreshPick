@@ -6,7 +6,7 @@ import { CONTACT } from "../constants";
 const HeroSection = () => {
   useGSAP(() => {
     const titleSplit = SplitText.create(".hero-title", {
-      type: "chars",
+      type: "chars, words",
     });
 
     const tl = gsap.timeline({

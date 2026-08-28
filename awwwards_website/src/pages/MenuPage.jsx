@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { flavorlists, CONTACT } from "../constants";
 import FooterSection from "../sections/FooterSection";
+import JuiceCard from "../components/JuiceCard";
 
 const MenuPage = () => {
   useGSAP(() => {
@@ -49,43 +50,12 @@ const MenuPage = () => {
 
           <div className="menu-page-grid grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 md:gap-8">
             {flavorlists.map((item, index) => (
-              <div key={item.name} className="menu-page-card menu-card">
-                {index === 3 && (
-                  <span className="menu-badge">Customer Favorite</span>
-                )}
-
-                <div className="menu-card-img">
-                  <img src={item.img} alt={item.name} />
-                  <div className="menu-card-img-fade" />
-                  {item.price && (
-                    <span className="menu-price-badge">
-                      From UGX {item.price.small.toLocaleString()}
-                    </span>
-                  )}
-                </div>
-
-                <div className="menu-card-body">
-                  <div>
-                    <h3 className="menu-card-name">{item.name}</h3>
-                    <p className="menu-card-desc">{item.desc}</p>
-                  </div>
-
-                  <div className="menu-card-footer">
-                    {item.price ? (
-                      <span className="menu-card-tag menu-card-price">
-                        Large UGX {item.price.large.toLocaleString()} &middot;
-                        Small UGX {item.price.small.toLocaleString()}
-                      </span>
-                    ) : (
-                      <span className="menu-card-tag">Ask in-store</span>
-                    )}
-
-                    <a href={CONTACT.phoneHref} className="menu-order-btn">
-                      Order
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <JuiceCard
+                key={item.name}
+                item={item}
+                badge={index === 3 ? "Customer Favorite" : null}
+                className="menu-page-card"
+              />
             ))}
           </div>
         </div>

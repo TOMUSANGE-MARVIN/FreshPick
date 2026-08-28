@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
     }
 
     .menu-card {
-      @apply relative bg-white rounded-[1.75rem] overflow-hidden flex flex-col;
+      @apply relative rounded-[1.75rem] overflow-hidden aspect-[4/5];
       box-shadow: 0 1px 3px rgba(18, 59, 27, 0.08), 0 12px 30px -12px rgba(18, 59, 27, 0.12);
       transition: transform 0.35s ease, box-shadow 0.35s ease;
 
@@ -187,45 +187,66 @@ body::-webkit-scrollbar {
       }
 
       .menu-badge {
-        @apply absolute top-4 left-4 z-10 bg-mid-brown text-white font-paragraph text-[11px] font-bold uppercase tracking-wide rounded-full px-3 py-1.5 shadow-md;
+        @apply absolute top-4 left-4 z-20 bg-mid-brown text-white font-paragraph text-[11px] font-bold uppercase tracking-wide rounded-full px-3 py-1.5 shadow-md;
       }
 
       .menu-card-img {
-        @apply h-64 overflow-hidden relative;
+        @apply absolute inset-0 size-full overflow-hidden;
 
         img {
           @apply size-full object-cover;
-          transition: transform 0.5s ease;
-        }
-
-        .menu-card-img-fade {
-          @apply absolute inset-x-0 bottom-0 h-20 pointer-events-none;
-          background: linear-gradient(to top, rgba(0, 0, 0, 0.28), transparent);
-        }
-
-        .menu-price-badge {
-          @apply absolute bottom-3 right-3 z-10 bg-white text-dark-brown font-paragraph text-xs font-bold uppercase tracking-wide rounded-full px-3 py-1.5 shadow-md;
+          transition: transform 0.6s ease;
         }
       }
 
-      .menu-card-body {
-        @apply flex flex-col justify-between flex-1 p-6 gap-5;
+      .menu-card-scrim {
+        @apply absolute inset-x-0 bottom-0 h-2/3 pointer-events-none z-10;
+        background: linear-gradient(to top, rgba(18, 59, 27, 0.92) 0%, rgba(18, 59, 27, 0.5) 55%, transparent 100%);
+      }
+
+      .menu-price-badge {
+        @apply absolute top-4 right-4 z-20 bg-white text-dark-brown font-paragraph text-xs font-bold uppercase tracking-wide rounded-full px-3 py-1.5 shadow-md;
+      }
+
+      .menu-card-info {
+        @apply absolute inset-x-0 bottom-0 z-20 p-6;
       }
 
       .menu-card-name {
-        @apply font-bold text-2xl uppercase tracking-tight text-dark-brown;
+        @apply font-bold text-2xl uppercase tracking-tight text-white;
+      }
+
+      .menu-card-detail {
+        @apply grid transition-[grid-template-rows] duration-500 ease-out;
+        grid-template-rows: 0fr;
+
+        > div {
+          @apply overflow-hidden;
+        }
       }
 
       .menu-card-desc {
-        @apply font-paragraph text-sm mt-2 text-[#123b1b99] leading-relaxed min-h-10;
+        @apply font-paragraph text-sm mt-2 text-white/80 leading-relaxed;
       }
 
       .menu-card-footer {
-        @apply flex items-center justify-between gap-3 pt-5 border-t border-[#123b1b14];
+        @apply flex items-center justify-between gap-3 pt-4 mt-1 border-t border-white/20;
       }
 
       .menu-card-tag {
-        @apply inline-flex items-center gap-1.5 font-paragraph text-xs font-semibold text-light-brown;
+        @apply inline-flex items-center gap-1.5 font-paragraph text-xs font-semibold text-milk;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover .menu-card-detail {
+          grid-template-rows: 1fr;
+        }
+      }
+
+      @media not all and (hover: hover) {
+        .menu-card-detail {
+          grid-template-rows: 1fr;
+        }
       }
     }
 
