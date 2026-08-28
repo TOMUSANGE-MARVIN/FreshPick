@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { CONTACT } from "../constants";
 
 const FooterSection = () => {
   return (
@@ -31,20 +32,35 @@ const FooterSection = () => {
         <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
           <div className="flex items-center md:gap-16 gap-5">
             <div>
-              <p>FreshPick Flavors</p>
+              <p>FreshPick</p>
+              <p className="text-sm opacity-70">
+                Fresh juices, shawarma and toast — fresh choices for every
+                craving.
+              </p>
             </div>
             <div>
-              <p>Order Delivery</p>
-              <p>Ggaba Rd</p>
-              <p>Find Us</p>
+              <p>Order</p>
+              <a
+                href={CONTACT.phoneHref}
+                className="block hover:text-light-brown transition-colors"
+              >
+                {CONTACT.phoneDisplay}
+              </a>
+              <p>KIU &bull; JB Mall &bull; Soya &bull; Bunga</p>
             </div>
             <div>
               <p>Company</p>
-              <Link to="/contact" className="block hover:text-light-brown transition-colors">
-                Contact
+              <Link to="/menu" className="block hover:text-light-brown transition-colors">
+                Menu
               </Link>
               <Link to="/about" className="block hover:text-light-brown transition-colors">
                 About Us
+              </Link>
+              <Link to="/blog" className="block hover:text-light-brown transition-colors">
+                Blog
+              </Link>
+              <Link to="/contact" className="block hover:text-light-brown transition-colors">
+                Contact
               </Link>
             </div>
           </div>

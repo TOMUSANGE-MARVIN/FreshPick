@@ -72,7 +72,7 @@ const FlavorSlider = () => {
             className={`relative z-30 lg:w-[36vw] w-72 lg:h-[65vh] md:w-[70vw] md:h-[45vh] h-64 flex-none rounded-[2vw] overflow-hidden ${flavor.rotation}`}
           >
             <img
-              src={flavor.img}
+              src={flavor.sliderImg || flavor.img}
               alt={flavor.name}
               className="absolute inset-0 size-full object-cover"
             />

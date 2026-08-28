@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { CONTACT } from "../constants";
 
 const HeroSection = () => {
   useGSAP(() => {
@@ -78,13 +79,23 @@ const HeroSection = () => {
           </div>
 
           <h2>
-            Cold-pressed, hand-picked and delivered fresh from Ggaba Rd.
-            Real fruit, no shortcuts, no added sugar — just pure juice.
+            Fresh juices, delicious shawarma and satisfying toast — prepared
+            to give you something refreshing and something worth coming back
+            for.
           </h2>
 
-          <div className="hero-button">
-            <p>Order Fresh Juice</p>
+          <div className="hero-cta-group">
+            <a href={CONTACT.phoneHref} className="hero-button">
+              Order Now
+            </a>
+            <a href="#menu" className="hero-button-secondary">
+              Explore Our Menu
+            </a>
           </div>
+
+          <p className="hero-branch-strip">
+            Find FreshPick at KIU &bull; JB Mall &bull; Soya &bull; Bunga
+          </p>
         </div>
       </div>
     </section>

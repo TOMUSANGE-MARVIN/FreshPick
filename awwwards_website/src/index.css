@@ -114,8 +114,20 @@ body::-webkit-scrollbar {
         @apply font-paragraph text-white text-center md:max-w-lg max-w-sm px-5 md:text-lg leading-[115%] mt-3 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)];
       }
 
+      .hero-cta-group {
+        @apply md:mt-16 mt-10 flex flex-wrap justify-center gap-4;
+      }
+
       .hero-button {
-        @apply md:mt-16 mt-10 text-white bg-light-brown uppercase font-bold text-lg rounded-full md:p-5 p-3 md:px-16 px-10;
+        @apply text-white bg-light-brown uppercase font-bold text-lg rounded-full md:p-5 p-3 md:px-16 px-10 hover:opacity-90 transition-opacity;
+      }
+
+      .hero-button-secondary {
+        @apply text-white bg-white/15 backdrop-blur-sm border border-white/40 uppercase font-bold text-lg rounded-full md:p-5 p-3 md:px-16 px-10 hover:bg-white/25 transition-colors;
+      }
+
+      .hero-branch-strip {
+        @apply font-paragraph text-white/80 text-sm md:text-base tracking-wide mt-6 text-center px-5;
       }
     }
   }
@@ -189,6 +201,10 @@ body::-webkit-scrollbar {
         .menu-card-img-fade {
           @apply absolute inset-x-0 bottom-0 h-20 pointer-events-none;
           background: linear-gradient(to top, rgba(0, 0, 0, 0.28), transparent);
+        }
+
+        .menu-price-badge {
+          @apply absolute bottom-3 right-3 z-10 bg-white text-dark-brown font-paragraph text-xs font-bold uppercase tracking-wide rounded-full px-3 py-1.5 shadow-md;
         }
       }
 
@@ -447,6 +463,64 @@ body::-webkit-scrollbar {
 
   .contact-input {
     @apply bg-white rounded-xl px-4 py-3 font-paragraph text-base font-normal normal-case tracking-normal text-dark-brown border border-transparent focus:border-light-brown outline-none transition-colors;
+  }
+
+  .why-card {
+    @apply bg-milk rounded-[1.75rem] p-7 text-center flex flex-col items-center;
+
+    .why-card-icon {
+      @apply size-9 text-light-brown mb-4;
+    }
+
+    .why-card-title {
+      @apply font-bold text-lg uppercase tracking-tight text-dark-brown;
+    }
+
+    .why-card-desc {
+      @apply font-paragraph text-sm mt-2 text-[#123b1b99] leading-relaxed;
+    }
+  }
+
+  .branch-card {
+    @apply bg-white rounded-[1.75rem] p-7 shadow-sm flex flex-col items-start gap-3;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 40px -14px rgba(18, 59, 27, 0.18);
+    }
+
+    .branch-card-name {
+      @apply font-bold text-2xl uppercase tracking-tight text-dark-brown;
+    }
+
+    .branch-card-desc {
+      @apply font-paragraph text-sm text-[#123b1b99] leading-relaxed flex-1;
+    }
+
+    .branch-card-cta {
+      @apply inline-flex items-center gap-1.5 text-light-brown font-bold uppercase text-sm tracking-wide hover:text-dark-brown transition-colors;
+    }
+  }
+
+  .menu-page-hero {
+    @apply bg-white;
+  }
+
+  .food-placeholder-card {
+    @apply bg-milk rounded-[1.75rem] p-8 text-center;
+
+    .food-placeholder-title {
+      @apply font-bold text-2xl uppercase tracking-tight text-dark-brown;
+    }
+
+    .food-placeholder-desc {
+      @apply font-paragraph text-base mt-3 text-[#123b1b99] leading-relaxed max-w-md mx-auto;
+    }
+  }
+
+  .blog-teaser-badge {
+    @apply absolute top-4 right-4 bg-mid-brown text-white font-paragraph text-[10px] font-bold uppercase tracking-wide rounded-full px-3 py-1.5 shadow-md;
   }
 }
 

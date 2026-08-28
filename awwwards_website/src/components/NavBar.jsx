@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { CONTACT } from "../constants";
 
 const navLinks = [
   { label: "Home", to: "/" },
+  { label: "Menu", to: "/menu" },
   { label: "About Us", to: "/about" },
   { label: "Blog", to: "/blog" },
   { label: "Contact", to: "/contact" },
@@ -10,8 +12,6 @@ const navLinks = [
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
-  const isHome = pathname === "/";
 
   return (
     <nav className="fixed top-0 left-0 z-50 md:p-9 p-3 w-full">
@@ -38,15 +38,9 @@ const NavBar = () => {
           ))}
         </div>
 
-        {isHome ? (
-          <a href="#menu" className="hidden md:flex nav-order-btn">
-            Order Now
-          </a>
-        ) : (
-          <NavLink to="/" className="hidden md:flex nav-order-btn">
-            Order Now
-          </NavLink>
-        )}
+        <a href={CONTACT.phoneHref} className="hidden md:flex nav-order-btn">
+          Order Now
+        </a>
 
         <button
           onClick={() => setOpen(!open)}
@@ -87,19 +81,13 @@ const NavBar = () => {
           </NavLink>
         ))}
 
-        {isHome ? (
-          <a href="#menu" onClick={() => setOpen(false)} className="nav-order-btn justify-center">
-            Order Now
-          </a>
-        ) : (
-          <NavLink
-            to="/"
-            onClick={() => setOpen(false)}
-            className="nav-order-btn justify-center"
-          >
-            Order Now
-          </NavLink>
-        )}
+        <a
+          href={CONTACT.phoneHref}
+          onClick={() => setOpen(false)}
+          className="nav-order-btn justify-center"
+        >
+          Order Now
+        </a>
       </div>
     </nav>
   );

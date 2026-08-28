@@ -51,7 +51,7 @@ const FlavorTitle = () => {
   return (
     <div className="general-title col-center lg:h-full 2xl:gap-32 xl:gap-24 gap-8 md:gap-16">
       <div className="overflow-hidden 2xl:py-0 py-3 first-text-split">
-        <h1>We've got 6</h1>
+        <h1>Our Fresh</h1>
       </div>
 
       <div
