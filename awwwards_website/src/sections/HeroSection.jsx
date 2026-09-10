@@ -1,9 +1,14 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { useMediaQuery } from "react-responsive";
 import { CONTACT } from "../constants";
 
 const HeroSection = () => {
+  const isTablet = useMediaQuery({
+    query: "(max-width: 1024px)",
+  });
+
   useGSAP(() => {
     const titleSplit = SplitText.create(".hero-title", {
       type: "chars, words",
@@ -37,6 +42,8 @@ const HeroSection = () => {
         "-=0.5"
       );
 
+    if (isTablet) return;
+
     const heroTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".hero-container",
@@ -51,7 +58,7 @@ const HeroSection = () => {
       yPercent: 30,
       ease: "power1.inOut",
     });
-  });
+  }, { dependencies: [isTablet] });
 
   return (
     <section className="bg-main-bg">
