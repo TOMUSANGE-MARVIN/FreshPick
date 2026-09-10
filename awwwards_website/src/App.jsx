@@ -6,6 +6,8 @@ import MenuPage from "./pages/MenuPage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsOfServicePage from "./pages/TermsOfServicePage";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const ScrollToTop = () => {
@@ -36,6 +38,8 @@ const App = () => {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms-of-service" element={<TermsOfServicePage />} />
       </Routes>
       <WhatsAppFloat />
     </main>
