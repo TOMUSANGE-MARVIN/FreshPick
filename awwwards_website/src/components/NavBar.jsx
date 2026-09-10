@@ -14,7 +14,14 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 md:p-9 p-3 w-full">
+    <>
+      {open && (
+        <div
+          className="mobile-nav-backdrop"
+          onClick={() => setOpen(false)}
+        />
+      )}
+      <nav className="fixed top-0 left-0 z-50 md:p-9 p-3 w-full">
       <div className="flex items-center justify-between">
         <NavLink to="/" className="bg-white rounded-full md:p-2 p-1.5 shadow-md">
           <img
@@ -89,7 +96,8 @@ const NavBar = () => {
           Order Now
         </a>
       </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
