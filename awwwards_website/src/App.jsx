@@ -6,6 +6,7 @@ import MenuPage from "./pages/MenuPage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <WhatsAppFloat />
     </main>
   );
 };

@@ -95,7 +95,7 @@ body::-webkit-scrollbar {
       @apply relative z-10 w-full h-full flex flex-col 2xl:justify-center items-center translate-y-10 2xl:pt-0 md:pt-32 pt-24;
 
       .hero-title {
-        @apply text-white 2xl:text-[8.5rem] md:text-[6.5rem] text-[3.3rem] font-bold uppercase leading-[0.9] tracking-[-.35vw] 2xl:mb-0 mb-5 [text-shadow:0_2px_20px_rgba(0,0,0,0.35)];
+        @apply text-white text-center 2xl:text-[8.5rem] md:text-[6.5rem] text-[3.3rem] font-bold uppercase leading-[0.9] tracking-[-.35vw] 2xl:mb-0 mb-5 [text-shadow:0_2px_20px_rgba(0,0,0,0.35)];
       }
 
       .hero-text-scroll {
@@ -601,5 +601,57 @@ body::-webkit-scrollbar {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 70;
+  width: 60px;
+  height: 60px;
+  border-radius: 9999px;
+  background-color: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 34px -6px rgba(0, 0, 0, 0.45);
+}
+.whatsapp-float svg {
+  position: relative;
+  z-index: 1;
+}
+.whatsapp-float-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: #25d366;
+  opacity: 0.55;
+  animation: whatsapp-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes whatsapp-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  75%,
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+@media (max-width: 640px) {
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
   }
 }
