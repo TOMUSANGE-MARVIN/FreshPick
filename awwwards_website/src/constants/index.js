@@ -57,18 +57,26 @@ const branches = [
   {
     name: "KIU",
     desc: "Visit FreshPick at our KIU branch for fresh juices, shawarma and toast.",
+    landmark: "Near Kampala International University (KIU) main campus",
+    mapQuery: "Kampala International University, Kampala, Uganda",
   },
   {
     name: "JB Mall",
     desc: "Visit FreshPick at our JB Mall branch for fresh juices, shawarma and toast.",
+    landmark: "At JB Mall",
+    mapQuery: "JB Mall, Kampala, Uganda",
   },
   {
     name: "Soya",
     desc: "Visit FreshPick at our Soya branch for fresh juices, shawarma and toast.",
+    landmark: "In Soya, Kampala",
+    mapQuery: "Soya, Kampala, Uganda",
   },
   {
     name: "Bunga",
     desc: "Visit FreshPick at our Bunga branch for fresh juices, shawarma and toast.",
+    landmark: "In Bunga, Kampala",
+    mapQuery: "Bunga, Kampala, Uganda",
   },
 ];
 

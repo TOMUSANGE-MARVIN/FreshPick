@@ -515,12 +515,42 @@ body::-webkit-scrollbar {
       @apply font-bold text-2xl uppercase tracking-tight text-dark-brown;
     }
 
+    .branch-card-landmark {
+      @apply flex items-center gap-1.5 font-paragraph text-xs font-semibold uppercase tracking-wide text-light-brown;
+    }
+
     .branch-card-desc {
       @apply font-paragraph text-sm text-[#123b1b99] leading-relaxed flex-1;
     }
 
+    .branch-card-links {
+      @apply flex flex-col items-start gap-2;
+    }
+
     .branch-card-cta {
       @apply inline-flex items-center gap-1.5 text-light-brown font-bold uppercase text-sm tracking-wide hover:text-dark-brown transition-colors;
+    }
+  }
+
+  .branch-info-card {
+    @apply bg-white rounded-[1.75rem] p-7 shadow-sm flex flex-col items-start gap-4;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 40px -14px rgba(18, 59, 27, 0.18);
+    }
+
+    .branch-info-meta {
+      @apply flex flex-col gap-2 w-full pt-4 border-t border-[#123b1b1a];
+
+      dt {
+        @apply font-paragraph text-[11px] font-bold uppercase tracking-wide text-[#123b1b66];
+      }
+
+      dd {
+        @apply font-paragraph text-sm text-dark-brown mt-0.5;
+      }
     }
   }
 
