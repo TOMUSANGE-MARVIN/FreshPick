@@ -75,8 +75,8 @@ const MenuPage = () => {
           <div className="food-placeholder-grid grid md:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">
             <div className="food-placeholder-card">
               <img
-                src="/images/freshpick/packaging-box.jpg"
-                alt="FreshPick shawarma packaging"
+                src="/images/freshpick/food-shawarma.jpg"
+                alt="FreshPick shawarma wrap"
                 className="rounded-2xl mb-5 w-full aspect-[4/3] object-cover"
               />
               <h3 className="food-placeholder-title">Shawarma</h3>
@@ -91,8 +91,8 @@ const MenuPage = () => {
 
             <div className="food-placeholder-card">
               <img
-                src="/images/freshpick/packaging-takeaway.jpg"
-                alt="FreshPick toast packaging"
+                src="/images/freshpick/food-toast.jpg"
+                alt="FreshPick toast"
                 className="rounded-2xl mb-5 w-full aspect-[4/3] object-cover"
               />
               <h3 className="food-placeholder-title">Toast</h3>
