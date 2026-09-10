@@ -30,7 +30,7 @@ const FooterSection = () => {
         </div>
 
         <div className="mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium">
-          <div className="flex items-center md:gap-16 gap-5">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-16">
             <div>
               <p>FreshPick</p>
               <p className="text-sm opacity-70">
