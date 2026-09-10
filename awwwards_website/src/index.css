@@ -502,38 +502,50 @@ body::-webkit-scrollbar {
     }
   }
 
+  .branch-card-map {
+    @apply relative w-full h-40 bg-milk overflow-hidden;
+
+    iframe {
+      @apply absolute inset-0 size-full border-0;
+    }
+  }
+
+  .branch-card-body {
+    @apply flex flex-col items-start gap-3 p-7 flex-1;
+  }
+
+  .branch-card-name {
+    @apply font-bold text-2xl uppercase tracking-tight text-dark-brown;
+  }
+
+  .branch-card-landmark {
+    @apply flex items-center gap-1.5 font-paragraph text-xs font-semibold uppercase tracking-wide text-light-brown;
+  }
+
+  .branch-card-desc {
+    @apply font-paragraph text-sm text-[#123b1b99] leading-relaxed flex-1;
+  }
+
+  .branch-card-links {
+    @apply flex flex-col items-start gap-2;
+  }
+
+  .branch-card-cta {
+    @apply inline-flex items-center gap-1.5 text-light-brown font-bold uppercase text-sm tracking-wide hover:text-dark-brown transition-colors;
+  }
+
   .branch-card {
-    @apply bg-white rounded-[1.75rem] p-7 shadow-sm flex flex-col items-start gap-3;
+    @apply bg-white rounded-[1.75rem] shadow-sm overflow-hidden flex flex-col;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 
     &:hover {
       transform: translateY(-6px);
       box-shadow: 0 24px 40px -14px rgba(18, 59, 27, 0.18);
     }
-
-    .branch-card-name {
-      @apply font-bold text-2xl uppercase tracking-tight text-dark-brown;
-    }
-
-    .branch-card-landmark {
-      @apply flex items-center gap-1.5 font-paragraph text-xs font-semibold uppercase tracking-wide text-light-brown;
-    }
-
-    .branch-card-desc {
-      @apply font-paragraph text-sm text-[#123b1b99] leading-relaxed flex-1;
-    }
-
-    .branch-card-links {
-      @apply flex flex-col items-start gap-2;
-    }
-
-    .branch-card-cta {
-      @apply inline-flex items-center gap-1.5 text-light-brown font-bold uppercase text-sm tracking-wide hover:text-dark-brown transition-colors;
-    }
   }
 
   .branch-info-card {
-    @apply bg-white rounded-[1.75rem] p-7 shadow-sm flex flex-col items-start gap-4;
+    @apply bg-white rounded-[1.75rem] shadow-sm overflow-hidden flex flex-col;
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 
     &:hover {
