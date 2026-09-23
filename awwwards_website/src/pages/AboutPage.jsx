@@ -147,9 +147,9 @@ const AboutPage = () => {
           <h2 className="about-title mt-4">Four FreshPick Locations</h2>
           <p className="font-paragraph text-lg mt-5 text-[#123b1b99] max-w-2xl">
             FreshPick currently serves customers through four branches: KIU,
-            JB Mall, Soya and Bunga. Each branch has its own address, opening
-            hours and contact details — call us and we'll point you to the
-            one nearest you.
+            JB Mall, Soya and Bunga — all open {CONTACT.hours},{" "}
+            {CONTACT.hoursDays}. Exact addresses are being confirmed — call
+            us and we'll point you to the one nearest you.
           </p>
 
           <div className="flex flex-wrap gap-3 mt-8">

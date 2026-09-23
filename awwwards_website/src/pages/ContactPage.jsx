@@ -135,8 +135,8 @@ const ContactPage = () => {
             <span className="menu-kicker">Branch Information</span>
             <h2 className="menu-title mt-3">Find Your Branch</h2>
             <p className="font-paragraph text-lg mt-4 text-[#123b1b99]">
-              Exact addresses and opening hours for each branch are being
-              confirmed — call us and we'll direct you straight away.
+              Open {CONTACT.hours}, {CONTACT.hoursDays}. Exact addresses are
+              being confirmed — call us and we'll direct you straight away.
             </p>
           </div>
 
@@ -171,7 +171,11 @@ const ContactPage = () => {
                   <dl className="branch-info-meta">
                     <div>
                       <dt>Hours</dt>
-                      <dd>Confirming soon</dd>
+                      <dd>
+                        {CONTACT.hours}
+                        <br />
+                        {CONTACT.hoursDays}
+                      </dd>
                     </div>
                     <div>
                       <dt>Phone / WhatsApp</dt>

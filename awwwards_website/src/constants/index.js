@@ -2,6 +2,8 @@ const CONTACT = {
   phoneDisplay: "0700 610 091",
   phoneHref: "tel:+256700610091",
   whatsappHref: "https://wa.me/256700610091",
+  hours: "9:00 AM – 11:30 PM",
+  hoursDays: "Monday – Sunday",
 };
 
 const flavorlists = [
